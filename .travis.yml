@@ -4,8 +4,8 @@ services:
     - docker
     
 before_install:
-    - docker build -t LOCALTAG -f Dockerfile.dev .
+    - docker build -t localtag -f Dockerfile.dev .
     
 script:
-    - docker run -e CI=true LOCALTAG npm run test
+    - docker run -e CI=true localtag npm run test
     
